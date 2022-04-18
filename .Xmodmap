@@ -1,0 +1,12 @@
+remove lock = Caps_Lock
+add control = Caps_Lock
+keycode 66 = Control_L NoSymbol Control_L
+
+remove control = Control_R
+remove mod1 = Alt_R
+!add control = Alt_R
+add mod3 = Alt_R
+add mod1 = Control_R
+keycode 105 = Alt_R Meta_R Alt_R Meta_R
+!keycode 108 = Control_R NoSymbol Control_R
+keycode 108 = Hangul

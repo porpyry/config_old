@@ -1,0 +1,25 @@
+Config {
+  font = "xft:NotoSansMono:weight=bold:pixelsize=14:antialias=true:hinting=true",
+  additionalFonts =
+    [ "xft:SpoqaHanSansNeo:weight=bold:pixelsize=14:antialias=true:hinting=true"
+    ],
+  bgColor = "#000000",
+  fgColor = "#ffffff",
+  position = Top,
+  allDesktops = True,
+  hideOnStart = False,
+  persistent = True,
+  lowerOnStart = True,
+  commands =
+    [ Run XPropertyLog "_XMONAD_LOG_WS"
+    , Run XPropertyLog "_XMONAD_LOG_TITLE"
+    , Run Date "%b %d (%a) %H:%M" "date" 10
+    --, Run Cpu ["-t", "<total>%"] 10
+    --, Run Memory ["-t", "<usedratio>%"] 10
+    --, Run DiskU [("/", "<free>")] [] 600
+    --, Run Network "wlp2s0" ["-t", "<rx><fn=1>↓</fn><tx><fn=1>↑</fn>"] 10
+    ],
+  sepChar = "%",
+  alignSep = "}{",
+  template = " %_XMONAD_LOG_WS% } %_XMONAD_LOG_TITLE% { %date% "
+  }
